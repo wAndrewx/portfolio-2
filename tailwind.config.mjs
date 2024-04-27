@@ -4,5 +4,5 @@ export default {
   theme: {
     // extend: { fontFamily: { sans: [] } },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
