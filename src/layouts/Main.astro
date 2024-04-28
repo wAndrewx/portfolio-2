@@ -2,11 +2,23 @@
 import Navigation from "./Navigation.astro";
 ---
 
-<div class="flex bg-slate-900 w-screen h-screen">
-  <div class="bg-slate-800 w-screen md:w-1/2">
-    <Navigation />
-    <div class="px-6">
+<div class="bg-slate-900 w-screen h-screen">
+  <div class="flex flex-col bg-slate-800 w-screen lg:w-1/2 min-h-screen">
+    <div class="">
+      <Navigation />
+    </div>
+    <div id="fsd" class="flex px-6 flex-1 h-full grow bg-red-200">
       <slot />
     </div>
   </div>
 </div>
+
+<style is:global>
+  @font-face {
+    font-family: "RecifeDisplay-Regular";
+    src: url("/fonts/RecifeDisplay-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

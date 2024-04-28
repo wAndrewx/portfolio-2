@@ -1,9 +1,23 @@
 ---
 import Container from "../layouts/Container.astro";
 import Main from "../layouts/Main.astro";
+import Star from "../components/Star.astro";
+import { Image } from "astro:assets";
 ---
 
 <Container title="Andrew Huynh">
-  <Main>landing</Main>
+  <Main>
+    <div
+      class="flex flex-col w-full font-recife self-end overflow-hidden gap-4"
+    >
+      <h1>Create,</h1>
+      <h1>Develop,</h1>
+      <span class="flex flex-row">
+        <h1>Shoot.</h1>
+        <!-- <Image src={"/images/Star.svg"} alt={"star"} width="128" height="128" /> -->
+      </span>
+    </div>
+  </Main>
 </Container>
 
+<!-- class="animate-reverse-spin" -->
