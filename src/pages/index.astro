@@ -1,20 +1,25 @@
 ---
 import Container from "../layouts/Container.astro";
 import Main from "../layouts/Main.astro";
-import Star from "../components/Star.astro";
-import { Image } from "astro:assets";
 ---
 
 <Container title="Andrew Huynh">
   <Main>
     <div
-      class="flex flex-col w-full font-recife self-end overflow-hidden gap-4"
+      class="container flex flex-col w-auto font-recife self-end overflow-hidden gap-4 py-3"
     >
-      <h1>Create,</h1>
-      <h1>Develop,</h1>
+      <p>Three words</p>
+      <h1 class="text-[16cqw] leading-none md:text-[9cqw]">Create,</h1>
+      <h1 class="text-[16cqw] leading-none md:text-[9cqw]">Develop,</h1>
       <span class="flex flex-row">
-        <h1>Shoot.</h1>
-        <!-- <Image src={"/images/Star.svg"} alt={"star"} width="128" height="128" /> -->
+        <h1 class="text-[16cqw] leading-none md:text-[9cqw]">Shoot</h1>
+        <div class="flex flex-grow-0 justify-center px-3 animate-reverse-spin">
+          <img
+            src={"/images/Star.svg"}
+            alt={"star"}
+            class="object-contain w-[16cqw] sm:w-[6cqw]"
+          />
+        </div>
       </span>
     </div>
   </Main>

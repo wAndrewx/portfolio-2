@@ -20,5 +20,9 @@ export default {
       },
     },
   },
-  plugins: [require("daisyui"), require("@tailwindcss/container-queries")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+    require("@tailwindcss/container-queries"),
+  ],
 };
