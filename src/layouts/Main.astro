@@ -3,7 +3,7 @@ import Navigation from "./Navigation.astro";
 ---
 
 <div class="bg-slate-900 w-screen h-screen flex">
-  <div class="flex flex-col bg-stone-600 w-screen lg:w-1/2 min-h-screen">
+  <div class="flex flex-col bg-[#da3931] w-screen lg:w-1/2 min-h-screen">
     <div class="">
       <Navigation />
     </div>
@@ -11,9 +11,10 @@ import Navigation from "./Navigation.astro";
       <slot />
     </div>
   </div>
-  <!-- <div class="w-1/2 bg-gradient-to-t from-red-500 to-indigo-600">
-    background probably
-  </div> -->
+  <div
+    class="z-10 w-1/2 hidden bg-cover bg-no-repeat bg-red-arm lg:flex 2xl:bg-repeat 2xl:bg-auto"
+  >
+  </div>
 </div>
 
 <style is:global>
@@ -34,4 +35,4 @@ import Navigation from "./Navigation.astro";
   }
 </style>
 
-<!-- bg-[#f43b00]  -->
+<!-- bg-[#da3931]  -->

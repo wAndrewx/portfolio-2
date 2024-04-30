@@ -3,6 +3,7 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      backgroundImage: { "red-arm": "url(images/redarm.jpg)" },
       fontFamily: {
         recife: ["RecifeDisplay-Regular"],
         jet: ["JetBrainsMono-Medium"],
