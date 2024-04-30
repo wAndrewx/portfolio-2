@@ -5,31 +5,64 @@ import Burger from "../components/Burger.astro";
 <div>
   <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
 
-  <nav class="flex w-auto p-3 flex-row justify-between align-middle">
-    <p class="self-center">ANDREW HUYNH</p>
-    <div class="hidden flex-row justify-around gap-x-8 md:flex self-center ">
-      <button>About me</button>
-      <button>Experience</button>
-      <button>Projects</button>
+  <nav
+    class="font-jet flex w-auto p-3 flex-row justify-between align-middle uppercase"
+  >
+    <!-- find css to make your name style highlighted like a pdf highlighter -->
+    <p class="self-center">> <a href="/"> ANDREWHUYNH </a></p>
+    <div
+      class="hidden flex-row justify-around gap-x-8 md:flex self-center text-xs"
+    >
+      <button class="uppercase">About me</button>
+      <button class="uppercase">Experience</button>
+      <button class="uppercase">Projects</button>
     </div>
     <div class="flex md:hidden">
-      <label class="btn btn-square" for="my-drawer-4" class="w-auto"
+      <label class="btn btn-square btn-ghost" for="my-drawer-4" class="w-auto"
         ><Burger /></label
       >
     </div>
   </nav>
 
-  <div class="drawer-side flex">
-    <div class="menu p-3 w-full min-h-full bg-base-200">
-      <label class="btn btn-square self-end" for="my-drawer-4" class="w-auto"
-        ><Burger /></label
+  <div class="drawer-side drawer-end z-10">
+    <div
+      class="menu p-3 w-screen min-h-full flex flex-col text-center bg-slate-700"
+    >
+      <label class="btn btn-square self-end" for="my-drawer-4"><Burger /></label
       >
-      <ul>
+
+      <div
+        class="font-sans uppercase gap-20 flex flex-1 flex-col place-self-center justify-center"
+      >
         <!-- Sidebar content here -->
-        <li><a> About me</a></li>
-        <li><a> Experience</a></li>
-        <li><a> Projects</a></li>
-      </ul>
+        <a href="/about" class="flex flex-row w-full">
+          <p class="text-xs leading-[0.5] font-bold">01</p>
+          <p
+            class="text-6xl pl-3 text-slate-700"
+            style="-webkit-text-stroke: 1px #fff"
+          >
+            About me
+          </p>
+        </a>
+        <a href="/experience" class="flex flex-row w-full">
+          <p class="text-xs leading-[0.5] font-bold">02</p>
+          <p
+            class="text-6xl pl-3 text-slate-700"
+            style="-webkit-text-stroke: 1px #fff"
+          >
+            Experience
+          </p>
+        </a>
+        <a href="/projects" class="flex flex-row w-full">
+          <p class="text-xs leading-[0.5] font-bold">03</p>
+          <p
+            class="text-6xl pl-3 text-slate-700"
+            style="-webkit-text-stroke: 1px #fff"
+          >
+            Projects
+          </p>
+        </a>
+      </div>
     </div>
   </div>
 </div>
