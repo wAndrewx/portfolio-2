@@ -8,25 +8,27 @@ import Main from "../layouts/Main.astro";
     <div
       class="container flex flex-col w-auto font-recife self-end overflow-hidden gap-4 py-3 te"
     >
-      <p class="font-jet italic text-white">Creativity into form, I</p>
+      <p class="font-jet italic text-white text-xs">Three words I like</p>
       <h1 class="text-[16cqw] text-[#ff9cc6] leading-none md:text-[9cqw]">
         Shape,
       </h1>
       <h1 class="text-[16cqw] text-[#ff9cc6] leading-none md:text-[9cqw]">
         Capture,
       </h1>
-      <span class="flex flex-row">
+      <div class="flex flex-row">
         <h1 class="text-[16cqw] leading-none md:text-[9cqw] text-[#ff9cc6]">
           Develop
         </h1>
-        <div class="flex justify-center px-9">
+        <div class="flex justify-center px-6">
           <img
             src={"/images/Star.svg"}
             alt={"star"}
             class="w-[16cqw] md:w-[9cqw] animate-reverse-spin"
+            width="128px"
+            height="128px"
           />
         </div>
-      </span>
+      </div>
     </div>
   </Main>
 </Container>
