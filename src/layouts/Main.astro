@@ -1,9 +1,11 @@
 ---
 import Navigation from "./Navigation.astro";
+
+const { bgColor } = Astro.props;
 ---
 
-<div class="bg-slate-900 w-screen h-screen flex">
-  <div class="flex flex-col bg-[#da3931] w-screen lg:w-1/2 min-h-screen">
+<div class="w-screen h-screen flex">
+  <div class=`flex flex-col bg-[${bgColor}] w-screen lg:w-1/2 min-h-screen`>
     <div class="">
       <Navigation />
     </div>
