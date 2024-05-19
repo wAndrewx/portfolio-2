@@ -4,7 +4,11 @@ export default {
   safelist: ["bg-[#e3d9d0]", "bg-[#f2e8de]"],
   theme: {
     extend: {
-      backgroundImage: { "red-arm": "url(images/redarm.jpg)" },
+      backgroundImage: {
+        "red-arm": "url(images/redarm.jpg)",
+        "grad-purple":
+          "linear-gradient(240deg, #da3931 0%, #e74650 16%, #ee586e 33%, #f46887 50%, #f97a9f 66%, #fc8bb4 83%, #ff9cc6 100%)",
+      },
       fontFamily: {
         recife: ["RecifeDisplay-Regular"],
         jet: ["JetBrainsMono-Medium"],

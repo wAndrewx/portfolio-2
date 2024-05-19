@@ -2,7 +2,7 @@
   {
     "id":"1",
     "title":"Pomodoro App",
-    "description":"The Pomodoro app is a full stack web application which features\n    a time management method called Pomodoro Technique, allowing users to login and see their data such as how many intervals \n    they've completed.",
+    "description":"The Pomodoro app is a full stack web application which features a time management method called Pomodoro Technique, allowing users to login and see their data such as how many intervals  they've completed.",
     "tags":[
       "Javascript",
       "Next.js",
@@ -17,7 +17,7 @@
   {
     "id":"2",
     "title":"Coin Balance",
-    "description":"Coin balance is app which displays current market data only on coins users currently own using MetaMask and\n    EthPlorer's API and keeps track of the number of visits each currency users accessed.",
+    "description":"Coin balance is app which displays current market data only on coins users currently own using MetaMask and EthPlorer's API and keeps track of the number of visits each currency users accessed.",
     "tags":[
       "Typescript",
       "NextJS",
@@ -47,7 +47,7 @@
   {
     "id":"4",
     "title":"Portfolio",
-    "description":"Project to display my current projects and career path using Gatsby",
+    "description":"Current/Prvious project to display my current projects and career path using Gatsby",
     "tags":[
       "Javascript",
       "React",

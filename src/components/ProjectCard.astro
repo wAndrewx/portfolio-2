@@ -1,0 +1,112 @@
+---
+const { title, description, index } = Astro.props;
+---
+
+<script type="module" define:vars={{ title, description, index }}>
+  const subtitle = document.getElementsByClassName("pcard-subtitle")[index];
+
+  const createWord = (text, index) => {
+    const word = document.createElement("span");
+
+    word.innerHTML = `${text} `;
+
+    word.classList.add("pcard-subtitle-word");
+
+    word.style.transitionDelay = `${index * 40}ms`;
+
+    return word;
+  };
+
+  const addWord = (text, index) => {
+    subtitle.appendChild(createWord(text, index));
+  };
+
+  const createSubtitle = (text) => text.split(" ").map(addWord);
+
+  createSubtitle(description);
+</script>
+
+<div class="">
+  <div class="pcard bg-black">
+    <div class="pcard-content">
+      <h3 class="pcard-title">{title}</h3>
+      <h4 class="pcard-subtitle"></h4>
+    </div>
+  </div>
+</div>
+
+<style>
+  :root {
+    --border: rgb(3, 169, 244);
+
+    --g1: rgb(98, 0, 234);
+    --g2: rgb(236, 64, 122);
+    --g3: rgb(253, 216, 53);
+  }
+
+  .pcard {
+    display: hidden;
+    border: 0.5vmin solid var(--border);
+    cursor: pointer;
+    position: relative;
+    height: fit-content;
+  }
+
+  .pcard:hover:before {
+    background-position: 100% 100%;
+    transform: scale(1.04, 1.12);
+  }
+
+  .pcard:hover > .pcard-content {
+    background-position: -10% 0%;
+  }
+
+  /* this is the rainbow shit */
+  .pcard:before {
+    background: linear-gradient(
+      130deg,
+      transparent 0% 33%,
+      var(--g1) 66%,
+      var(--g2) 83.5%,
+      var(--g3) 100%
+    );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    left: 0px;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    transition:
+      background-position 350ms ease,
+      transform 350ms ease;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .pcard-content {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.2) 8%,
+      transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
+    padding: 4vmin;
+    position: relative;
+    transition: background-position 350ms ease;
+    z-index: 2;
+  }
+
+  .pcard-title,
+  .pcard-subtitle {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 400;
+    margin: 0px;
+  }
+
+  .pcard-title {
+    font-size: 4vmin;
+  }
+</style>

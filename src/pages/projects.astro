@@ -1,8 +1,32 @@
 ---
+import { Image, Picture } from "astro:assets";
+import projects from "../../info.json";
 import Container from "../layouts/Container.astro";
 import Main from "../layouts/Main.astro";
+import Project from "../components/ProjectCard.astro";
 ---
 
 <Container title="Projects">
-  <Main>PROJECTS</Main>
+  <Main bgColor="#f2e8de">
+    <div class="bg-blue-200 flex flex-col gap-3 overflow-y-scroll m-6">
+      {
+        projects.map((project, index) => {
+          return (
+            <div id={project.id} class="">
+              <Project
+                title={project.title}
+                description={project.description}
+                index={index}
+              />
+              {/* <div>
+                {project.tags.map((tag) => {
+                  return <div class="badge badge-ghost m-1">{tag}</div>;
+                })}
+              </div> */}
+            </div>
+          );
+        })
+      }
+    </div>
+  </Main>
 </Container>

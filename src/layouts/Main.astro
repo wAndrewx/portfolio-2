@@ -1,7 +1,7 @@
 ---
 import Navigation from "./Navigation.astro";
 
-const { bgColor } = Astro.props;
+const { bgColor, fullScreen } = Astro.props;
 ---
 
 <div class="w-screen h-screen flex">
@@ -9,14 +9,13 @@ const { bgColor } = Astro.props;
     <div class="">
       <Navigation />
     </div>
-    <div id="fsd" class="flex px-6 h-full">
+    <div class="flex h-full w-full overflow-hidden">
       <slot />
     </div>
   </div>
-  <div
-    class="z-10 w-1/2 hidden bg-cover bg-no-repeat bg-red-arm lg:flex 2xl:bg-repeat 2xl:bg-auto"
-  >
-  </div>
+  <!-- <div
+    class="z-10 w-1/2 bg-cover bg-no-repeat bg-red-arm lg:flex 2xl:bg-repeat 2xl:bg-auto hidden"
+  > -->
 </div>
 
 <style is:global>
