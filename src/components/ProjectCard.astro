@@ -1,5 +1,5 @@
 ---
-const { title, description, index } = Astro.props;
+const { title, description, index, tags } = Astro.props;
 ---
 
 <script type="module" define:vars={{ title, description, index }}>
@@ -12,7 +12,7 @@ const { title, description, index } = Astro.props;
 
     word.classList.add("pcard-subtitle-word");
 
-    word.style.transitionDelay = `${index * 40}ms`;
+    word.style.transitionDelay = `${index * 20}ms`;
 
     return word;
   };
@@ -29,24 +29,49 @@ const { title, description, index } = Astro.props;
 <div class="">
   <div class="pcard bg-black">
     <div class="pcard-content">
-      <h3 class="pcard-title">{title}</h3>
-      <h4 class="pcard-subtitle"></h4>
+      <h3 class="pcard-title py-3">{title}</h3>
+      <h4 class="pcard-subtitle py-3"></h4>
+      {
+        (
+          <div id="" class="badgies py-3">
+            {tags.map((tag: string) => {
+              return (
+                <div class="badge badge-ghost m-1 text-white font-jet">
+                  {tag}
+                </div>
+              );
+            })}
+          </div>
+        )
+      }
     </div>
   </div>
 </div>
 
 <style>
   :root {
-    --border: rgb(3, 169, 244);
+    --border: #31d2da;
 
-    --g1: rgb(98, 0, 234);
-    --g2: rgb(236, 64, 122);
+    --g1: #da3931;
+    --g2: #da3931;
     --g3: rgb(253, 216, 53);
+
+    --s: 14px; /* control the size */
+    --d: 4px; /* control the gap between stars */
   }
 
+  .badgies {
+    opacity: 0;
+  }
+
+  @media (max-width: 768px) {
+    .badgies {
+      opacity: 1;
+    }
+  }
   .pcard {
     display: hidden;
-    border: 0.5vmin solid var(--border);
+    border: 0.4vmin solid var(--border);
     cursor: pointer;
     position: relative;
     height: fit-content;
@@ -54,7 +79,7 @@ const { title, description, index } = Astro.props;
 
   .pcard:hover:before {
     background-position: 100% 100%;
-    transform: scale(1.04, 1.12);
+    transform: scale(1.02, 1.12);
   }
 
   .pcard:hover > .pcard-content {
@@ -86,13 +111,11 @@ const { title, description, index } = Astro.props;
   }
 
   .pcard-content {
-    background-image: radial-gradient(
-      rgba(255, 255, 255, 0.2) 8%,
-      transparent 8%
-    );
-    background-position: 0% 0%;
-    background-size: 5vmin 5vmin;
-    padding: 4vmin;
+    background: url(/public/images/StarProject.svg);
+    background-position: 0 calc(var(--s) * 0.35);
+    background-size: calc(var(--s) + var(--d)) calc(var(--s) + var(--d));
+
+    padding: 2vmin;
     position: relative;
     transition: background-position 350ms ease;
     z-index: 2;
@@ -101,12 +124,12 @@ const { title, description, index } = Astro.props;
   .pcard-title,
   .pcard-subtitle {
     color: white;
-    font-family: sans-serif;
-    font-weight: 400;
+    font-family: "JetBrainsMono-Medium";
     margin: 0px;
   }
 
   .pcard-title {
-    font-size: 4vmin;
+    font-size: 2em;
+    text-decoration: underline;
   }
 </style>

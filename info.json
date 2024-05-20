@@ -32,7 +32,7 @@
   {
     "id":"3",
     "title":"Fullstack Twitter Mock App",
-    "description":"Twitter Mock App is an interpretation on how Twitter's services such as tweets and posts are handled if it was a microsevice on a basic level",
+    "description":"Twitter Mock App is a project experimenting with AWS's Lambda utilising Serverless to understand how cloudformation builds its stack and for me to understand how microservices would work in a basic level",
     "tags":[
       "JavaScript",
       "AWS Lamda",
@@ -47,15 +47,14 @@
   {
     "id":"4",
     "title":"Portfolio",
-    "description":"Current/Prvious project to display my current projects and career path using Gatsby",
+    "description":"A website showcasing current/previous projects and career path using a new front end frameworks",
     "tags":[
       "Javascript",
-      "React",
-      "ChakraUI",
-      "Gatsby"
+      "Astro",
+      "TailwindCSS"
     ],
     "image":"port.png",
     "link":"https://www.andrewhuynh.ca",
-    "projectGithubLink":"https://github.com/wAndrewx/portfolio"
+    "projectGithubLink":"https://github.com/wAndrewx/portfolio-2"
   }
 ]

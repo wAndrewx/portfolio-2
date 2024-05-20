@@ -8,21 +8,19 @@ import Project from "../components/ProjectCard.astro";
 
 <Container title="Projects">
   <Main bgColor="#f2e8de">
-    <div class="bg-blue-200 flex flex-col gap-3 overflow-y-scroll m-6">
+    <div class="flex flex-col gap-6 overflow-y-auto p-6 w-auto">
       {
         projects.map((project, index) => {
           return (
-            <div id={project.id} class="">
-              <Project
-                title={project.title}
-                description={project.description}
-                index={index}
-              />
-              {/* <div>
-                {project.tags.map((tag) => {
-                  return <div class="badge badge-ghost m-1">{tag}</div>;
-                })}
-              </div> */}
+            <div id={project.id}>
+              <a href={project.projectGithubLink} target="_blank">
+                <Project
+                  title={project.title}
+                  description={project.description}
+                  index={index}
+                  tags={project.tags}
+                />
+              </a>
             </div>
           );
         })

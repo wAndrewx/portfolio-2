@@ -2,12 +2,13 @@
 
 @layer utilities {
   :root {
-    --border: rgb(3, 169, 244);
+    --border: #31d2da;
 
-    --g1: rgb(98, 0, 234);
-    --g2: rgb(236, 64, 122);
+    --g1: #da3931;
+    --g2: #da3931;
     --g3: rgb(253, 216, 53);
   }
+
   .pcard-subtitle-word {
     display: inline-block;
     margin: 0vmin 0.3vmin;
@@ -18,7 +19,7 @@
   }
 
   @media (max-width: 768px) {
-    .pcard:before {
+    .pcard {
       background: linear-gradient(
         130deg,
         transparent 0% 33%,
@@ -49,6 +50,12 @@
 
   .pcard:active,
   .pcard:hover > .pcard-content > .pcard-subtitle > .pcard-subtitle-word {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: opacity 0ms, transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
+  }
+
+  .pcard:hover > .pcard-content > .badgies {
     opacity: 1;
     transform: translateY(0%);
     transition: opacity 0ms, transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
