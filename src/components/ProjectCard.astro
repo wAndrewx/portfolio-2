@@ -27,7 +27,7 @@ const { title, description, index, tags } = Astro.props;
 </script>
 
 <div class="">
-  <div class="pcard bg-black">
+  <div class="pcard">
     <div class="pcard-content">
       <h3 class="pcard-title py-3">{title}</h3>
       <h4 class="pcard-subtitle py-3"></h4>
@@ -50,11 +50,11 @@ const { title, description, index, tags } = Astro.props;
 
 <style>
   :root {
-    --border: #31d2da;
+    --border: black;
 
     --g1: #da3931;
     --g2: #da3931;
-    --g3: rgb(253, 216, 53);
+    --g3: #da3931;
 
     --s: 14px; /* control the size */
     --d: 4px; /* control the gap between stars */
@@ -79,7 +79,6 @@ const { title, description, index, tags } = Astro.props;
 
   .pcard:hover:before {
     background-position: 100% 100%;
-    transform: scale(1.02, 1.12);
   }
 
   .pcard:hover > .pcard-content {
@@ -110,11 +109,19 @@ const { title, description, index, tags } = Astro.props;
     z-index: 1;
   }
 
-  .pcard-content {
-    background: url(/public/images/StarProject.svg);
+  .pcard-content:hover {
+    background: url(images/StarProject.svg);
+
     background-position: 0 calc(var(--s) * 0.35);
     background-size: calc(var(--s) + var(--d)) calc(var(--s) + var(--d));
 
+    position: relative;
+    transition: background-position 350ms ease;
+    z-index: 2;
+  }
+
+  .pcard-content {
+    background-size: calc(var(--s) + var(--d)) calc(var(--s) + var(--d));
     padding: 2vmin;
     position: relative;
     transition: background-position 350ms ease;
@@ -123,7 +130,7 @@ const { title, description, index, tags } = Astro.props;
 
   .pcard-title,
   .pcard-subtitle {
-    color: white;
+    color: black;
     font-family: "JetBrainsMono-Medium";
     margin: 0px;
   }
