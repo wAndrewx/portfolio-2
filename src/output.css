@@ -153,10 +153,6 @@
   overflow-y: auto;
 }
 
-.overflow-y-scroll {
-  overflow-y: scroll;
-}
-
 .border {
   border-width: 1px;
 }
@@ -174,15 +170,6 @@
 .bg-\[\#f2e8de\] {
   --tw-bg-opacity: 1;
   background-color: rgb(242 232 222 / var(--tw-bg-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-red-arm {
-  background-image: url(images/redarm.jpg);
 }
 
 .bg-cover {
@@ -212,6 +199,10 @@
 
 .py-3 {
   padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.pb-3 {
   padding-bottom: 0.75rem;
 }
 
@@ -253,6 +244,11 @@
   font-size: 16cqw;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -260,6 +256,10 @@
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .font-medium {
@@ -358,10 +358,6 @@
     transition: opacity 0ms,
         transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
   }
-
-  .badgies {
-    opacity: 1;
-  }
 }
 
 .pcard:active,
@@ -386,9 +382,19 @@
     margin-left: 6vw;
   }
 
+  .sm\:w-min {
+    width: -moz-min-content;
+    width: min-content;
+  }
+
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
