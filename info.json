@@ -1,7 +1,7 @@
 [
   {
     "id":"1",
-    "title":"Pomodoro App",
+    "title":"Pomodoro Timer",
     "description":"The Pomodoro app is a full stack web application which features a time management method called Pomodoro Technique, allowing users to login and see their data such as how many intervals  they've completed.",
     "tags":[
       "Javascript",
@@ -16,7 +16,7 @@
   },
   {
     "id":"2",
-    "title":"Coin Balance",
+    "title":"Crypto explorer",
     "description":"Coin balance is app which displays current market data only on coins users currently own using MetaMask and EthPlorer's API and keeps track of the number of visits each currency users accessed.",
     "tags":[
       "Typescript",
@@ -31,8 +31,8 @@
   },
   {
     "id":"3",
-    "title":"Fullstack Twitter Mock App",
-    "description":"Twitter Mock App is a project experimenting with AWS's Lambda utilising Serverless to understand how cloudformation builds its stack and for me to understand how microservices would work in a basic level",
+    "title":"Fullstack Twitter Clone",
+    "description":"Twitter Clone is a project experimenting with AWS's Lambda utilising Serverless to understand how cloudformation builds its stack and for me to understand how microservices would work in a basic level",
     "tags":[
       "JavaScript",
       "AWS Lamda",
